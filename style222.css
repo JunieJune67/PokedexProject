@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Playfair+Display');
+
+body {
+     
+   background-image: url(pokepics/pokemon_ultraball_by_evocookies-d3fn0nh.jpg);
+   background-repeat: no-repeat;
+   background-size: auto; 
+   background-position: center center;
+    
+}
+
+h1 {
+    position: relative;
+}
+
+
+.curvy {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Audiowide', cursive;
+    color: black;
+    text-shadow: 5px 5px gold;
+}
+
+
+
+
+@keyframes updown { 
+    0%{
+    transform: translate(0px,10px);
+    }
+    100%{
+    transform: translate(0px,0px);
+    }
+    }
+    
+  .main-pics {
+   display: grid;   
+   grid-template-columns: auto auto auto;
+   grid-gap: 1px;
+   align-items: center;
+   top: 15%;
+  }
+
+
+
+.main-pics img {
+   
+   position: relative;
+   align-content: center;
+   width: 300;
+   height: 500;
+   border-radius: 25px;
+   box-shadow: transparent 0 3px 6px;
+   
+   
+}
+
+.main-pics img:hover {
+    box-shadow: 0 14px 28px gold;
+    transition: 0.3s;
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    animation: updown 500ms 1s infinite alternate;
+}
+
+
