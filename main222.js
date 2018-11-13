@@ -47,9 +47,7 @@ let justinJuniper = new Darktrainer('Justin Juniper')
                 data.name,
                 data.stats[4].base_stat,
                 data.abilities[0]['ability']['name'],
-                data.abilities[1]['ability']['name'],
-                data.abilities[2]['ability']['name'],
-                data.stats[3].stat.name,
+                data.stats[3].base_stat,
                 data.stats[5].base_stat
                 
                 )
@@ -72,8 +70,7 @@ let justinJuniper = new Darktrainer('Justin Juniper')
                 var newpokemon = new Pokemon(
                   data.name,
                   data.stats[4].base_stat,
-                   data.abilities[0]['ability']['name'],
-                  
+                  data.abilities[0]['ability']['name'],
                   data.stats[3].base_stat,
                   data.stats[5].base_stat
                 )
@@ -95,7 +92,6 @@ let justinJuniper = new Darktrainer('Justin Juniper')
                   data.name,
                   data.stats[4].base_stat,
                   data.abilities[0]['ability']['name'],
-                  
                   data.stats[3].base_stat,
                   data.stats[5].base_stat
                   )
@@ -110,10 +106,7 @@ let justinJuniper = new Darktrainer('Justin Juniper')
         xhttp.open('GET', 'http://fizal.me/pokeapi/api/v2/id/491.json', true);
         xhttp.send();
      }
-
-    //  function writeToScreen() {
-    //      document.getElementById("wow").disabled = true;
-    //  }
+    
 
      function writeToScreen(pokemon) {
         // var node = document.createElement('h3');
@@ -138,11 +131,11 @@ let justinJuniper = new Darktrainer('Justin Juniper')
         defense = document.getElementById('defen2');
 
        
-        name.innerHTML = pokemon.name;
-        hp.innerHTML = pokemon.hp;
-        attack.innerHTML = pokemon.attack;
-        abilities.innerHTML = pokemon.abilities;
-        defense.innerHTML = pokemon.defense;
+        name.innerHTML = (`Name: ${pokemon.name}`);
+        hp.innerHTML = (`HP: ${pokemon.hp}`);
+        attack.innerHTML = (`Attack: ${pokemon.attack}`);
+        abilities.innerHTML = (`Ability: ${pokemon.abilities}`);
+        defense.innerHTML = (`Defense: ${pokemon.defense}`);
        } 
      
 

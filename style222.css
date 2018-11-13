@@ -16,10 +16,16 @@ h1 {
 
 .curvy {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Audiowide', cursive;
     color: black;
     text-shadow: 5px 5px gold;
+}
+
+h2 {
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    text-shadow: 5px 5px grey;
 }
 
 
@@ -64,6 +70,20 @@ h1 {
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
     animation: updown 500ms 1s infinite alternate;
+}
+
+.hstats {
+    padd
+    margin-left: 2px;   
+    left: 0%;
+}
+
+.YVstats {
+    right: 0%;
+}
+
+.DRstats {
+    left: 20%;
 }
 
 
