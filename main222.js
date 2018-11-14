@@ -1,18 +1,21 @@
- 
+ var pokemonA = "Houndoom";
+ var pokemonB = "Yveltal";
+ var pokemonC = "Darkrai";
 
 
 
+let allPokemon =[];
 class Darktrainer {
-    constructor(name) {
+    constructor(name ) {
         this.name = name;
-        this.Pokemon = {};
+        this.Pokemon = [];
         
         
     }
     all() {
         
-        console.log(this.Pokemon)
-        return this.Pokemon;
+        //console.log(this.Pokemon)
+        return allPokemon;
     }
     get(name) {
         if(name == 'Houndoom') {
@@ -24,12 +27,7 @@ class Darktrainer {
            return callDarkrai();
        }
        
-        // for (let i = 0; i < this.Pokemon.length; i++)
-        
-        // if (Pokemon == name) {
-        //     return this.Pokemon[i];
-
-        // }
+       
     }
 }
 
@@ -40,7 +38,7 @@ class Darktrainer {
 
 
 
-justinJuniper = new Darktrainer("Junie")
+var justinJuniper = new Darktrainer("Junie", pokemonA, pokemonB, pokemonC);
 
     class Pokemon {
     constructor(name, attack, abilities, defense, hp) {
@@ -75,19 +73,9 @@ justinJuniper = new Darktrainer("Junie")
                 )
                console.log(newpokemon)
                writeToScreen(newpokemon)
-        function writeToScreen(pokemon) {
-        name = document.getElementById('wow');
-        hp = document.getElementById('hp');
-        attack = document.getElementById('attack');
-        abilities = document.getElementById('abil');
-        defense = document.getElementById('defen');
+       
+               allPokemon.push(newpokemon);
         
-        name.innerHTML = (`Name: ${pokemon.name}`);
-        hp.innerHTML = (`HP: ${pokemon.hp}`);
-        attack.innerHTML = (`Attack: ${pokemon.attack}`);
-        abilities.innerHTML = (`Ability: ${pokemon.abilities}`);
-        defense.innerHTML = (`Defense: ${pokemon.defense}`);
-        }
         
             }
         
@@ -111,19 +99,10 @@ justinJuniper = new Darktrainer("Junie")
                 )
                 console.log(newpokemon)
                 writeToScreen(newpokemon)
-     function writeToScreen(pokemon) {
-        name = document.getElementById('wow1');
-        hp = document.getElementById('hp1');
-        attack = document.getElementById('attack1');
-        abilities = document.getElementById('abil1');
-        defense = document.getElementById('defen1');
 
-        name.innerHTML = (`Name: ${pokemon.name}`);
-        hp.innerHTML = (`HP: ${pokemon.hp}`);
-        attack.innerHTML = (`Attack: ${pokemon.attack}`);
-        abilities.innerHTML = (`Ability: ${pokemon.abilities}`);
-        defense.innerHTML = (`Defense: ${pokemon.defense}`);
-     }
+            
+                allPokemon.push(newpokemon);
+       
             }
         };
         xhttp.open('GET', 'http://fizal.me/pokeapi/api/v2/name/yveltal.json', true);
@@ -146,19 +125,9 @@ justinJuniper = new Darktrainer("Junie")
                     
                   console.log(newpokemon)
                   writeToScreen(newpokemon)
-        function writeToScreen(pokemon) {
-        name = document.getElementById('wow2');
-        hp = document.getElementById('hp2');
-        attack = document.getElementById('attack2');
-        abilities = document.getElementById('abil2');
-        defense = document.getElementById('defen2');
-        name.innerHTML = (`Name: ${pokemon.name}`);
-        hp.innerHTML = (`HP: ${pokemon.hp}`);
-        attack.innerHTML = (`Attack: ${pokemon.attack}`);
-        abilities.innerHTML = (`Ability: ${pokemon.abilities}`);
-        defense.innerHTML = (`Defense: ${pokemon.defense}`);
-        }
-                  
+        
+       
+                  allPokemon.push(newpokemon);
                   
      
             }
@@ -168,5 +137,31 @@ justinJuniper = new Darktrainer("Junie")
      }
     
      
+     function writeToScreen(pokemon) {
+        name = document.getElementById('wow');
+        hp = document.getElementById('hp');
+        attack = document.getElementById('attack');
+        abilities = document.getElementById('abil');
+        defense = document.getElementById('defen');
+
+        
+       name = document.getElementById('wow1');
+       hp = document.getElementById('hp1');
+       attack = document.getElementById('attack1');
+       abilities = document.getElementById('abil1');
+       defense = document.getElementById('defen1');
+
+       name = document.getElementById('wow2');
+       hp = document.getElementById('hp2');
+       attack = document.getElementById('attack2');
+       abilities = document.getElementById('abil2');
+       defense = document.getElementById('defen2');
+
+       name.innerHTML = (`Name: ${pokemon.name}`);
+       hp.innerHTML = (`HP: ${pokemon.hp}`);
+       attack.innerHTML = (`Attack: ${pokemon.attack}`);
+       abilities.innerHTML = (`Ability: ${pokemon.abilities}`);
+       defense.innerHTML = (`Defense: ${pokemon.defense}`);
+       }
        
 
